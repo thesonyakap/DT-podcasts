@@ -7,26 +7,25 @@
 @font-face {
 	font-family: 'DT.HEADER';
 	font-weight: 700;
-	src: url(../assets/Шрифты/DT.HEADER.otf), url(../assets/Шрифты/DT.HEADER.ttf),
-		url(../assets/Шрифты/DT.HEADER.woff2), url(../assets/Шрифты/DT.HEADER.woff);
+	src: url(../assets/fonts/DT.HEADER.otf), url(../assets/fonts/DT.HEADER.ttf),
+		url(../assets/fonts/DT.HEADER.woff2), url(../assets/fonts/DT.HEADER.woff);
 	font-style: normal;
 }
 
 @font-face {
 	font-family: 'Montserrat-Bold';
 	font-weight: 700;
-	src: url(../assets/Шрифты/Montserrat-Bold.otf),
-		url(../assets/Шрифты/Montserrat-Bold.ttf),
-		url(../assets/Шрифты/Montserrat-Bold.woff2),
-		url(../assets/Шрифты/Montserrat-Bold.woff);
+	src: url(../assets/fonts/Montserrat-Bold.otf),
+		url(../assets/fonts/Montserrat-Bold.ttf),
+		url(../assets/fonts/Montserrat-Bold.woff2),
+		url(../assets/fonts/Montserrat-Bold.woff);
 	font-style: normal;
 }
 
 @font-face {
 	font-family: 'Montserrat';
-	src: url(../assets/Шрифты/Montserrat.otf),
-		url(../assets/Шрифты/Montserrat.ttf), url(../assets/Шрифты/Montserrat.woff2),
-		url(../assets/Шрифты/Montserrat.woff);
+	src: url(../assets/fonts/Montserrat.otf), url(../assets/fonts/Montserrat.ttf),
+		url(../assets/fonts/Montserrat.woff2), url(../assets/fonts/Montserrat.woff);
 	font-style: normal;
 }
 
@@ -201,13 +200,21 @@ span:after {
 	z-index: 10;
 }
 
+.icons img {
+	margin: 0px 30px;
+}
+
+.icons img:hover {
+	-webkit-filter: sepia(1) hue-rotate(310deg) saturate(10);
+	filter: sepia(1) hue-rotate(310deg) saturate(10);
+}
+
 .socials {
 	display: block;
 	width: 100%;
 	position: absolute;
-	bottom: 50%;
-	left: 25%;
-	justify-content: center;
+	bottom: 55%;
+	left: 37%;
 }
 
 .first-screen {
@@ -410,6 +417,7 @@ li:last-child {
 
 li:hover {
 	color: #e31e32;
+	transition: 0.3s linear;
 }
 
 .video-item {
@@ -547,9 +555,19 @@ iframe {
 
 .social-links img {
 	margin-top: 50px;
-	width: 407px;
-	height: 66px;
+	width: 50px;
+	height: 50px;
 	margin-left: -11px;
+}
+
+.social-icons {
+	display: flex;
+	justify-content: space-around;
+}
+
+.social-icons img:hover {
+	-webkit-filter: sepia(1) hue-rotate(310deg) saturate(10);
+	filter: sepia(1) hue-rotate(310deg) saturate(10);
 }
 
 .policy {
@@ -582,7 +600,7 @@ iframe {
 	color: #000;
 }
 
-.services:hover a {
+.services a:hover {
 	color: #e31e32;
 	transition: 0.3s linear;
 }
