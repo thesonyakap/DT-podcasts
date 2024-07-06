@@ -67,21 +67,38 @@ document.addEventListener('DOMContentLoaded', function () {
 })
 
 /* сортировка */
-document
-	.querySelector('.filter .founder')
-	.addEventListener('click', function () {
-		const videoHolder = document.querySelector('.video-holder')
-		const videoItems = Array.from(document.querySelectorAll('.video-item'))
-		const filteredItems = videoItems.filter(item =>
-			item.querySelector(
-				'a[data-position="Свой бизнес в IT"], a[data-position="Создание своего бизнеса IT"]'
-			)
-		)
+// document
+// 	.querySelector('.position-button')
+// 	.addEventListener('click', function () {
+// 		const mng = document.querySelector('.manager')
+// 		const videos = document.querySelectorAll('.video-item')
+// 		let videoHolder = document.querySelector('.video-holder')
+// 		if (videos == 'data-positon="Топ-менеджер"') {
+// 			videos.classList.add('visible')
+// 		} else {
+// 			videos.classList.add('.hidden')
+// 		}
+// 		console.log('videos')
+// 	})
 
-		const newHolder = document.createElement('div')
-		newHolder.className = 'video-holder'
+document.addEventListener('DOMContentLoaded', function () {
+	var managerItem = document.querySelector('.position-button .manager')
 
-		filteredItems.forEach(item => newHolder.appendChild(item))
+	if (managerItem) {
+		managerItem.addEventListener('click', function (event) {
+			event.stopPropagation()
 
-		videoHolder.parentNode.replaceChild(newHolder, videoHolder)
-	})
+			var videoItems = document.querySelectorAll('.video-item')
+
+			videoItems.forEach(function (item) {
+				item.style.display = 'none'
+			})
+
+			videoItems.forEach(function (item) {
+				if (item.getAttribute('data-position') === 'Топ-менеджер') {
+					item.style.display = 'block'
+				}
+			})
+		})
+	}
+})

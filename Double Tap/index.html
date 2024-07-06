@@ -98,7 +98,12 @@
 						<p>Сортировка</p>
 					</div>
 					<div class="sort">
-						<button data-sort="Дата добавления">Дата добавления</button>
+						<button data-sort="Дата добавления" class="date-button">Дата добавления
+							<ul class="date">
+								<li class="date-new">Сначала новые</li>
+								<li class="date-old">Сначала старые</li>
+							</ul>
+						</button>
 						<button class="position-button" data-sort="Должность">Должность
 							<ul class="position2">
 								<li class="manager">топ-менеджер</li>
@@ -106,10 +111,51 @@
 								<li class="business">свой бизнес в it</li>
 							</ul>
 						</button>
-						<button data-sort="Компания">Компания</button>
-						<button data-sort="Тема">Тема</button>
-						<button data-sort="Отрасль">Отрасль</button>
-						<button data-sort="Страна">Страна</button>
+						<button data-sort="Компания" class="company-button">Компания
+							<ul class="company">
+								<li class="EPAM">EPAM</li>
+								<li class="METRO">МЕТРО</li>
+								<li class="Kontur">Контур</li>
+								<li class="Yandex">Яндекс</li>
+								<li class="IT-regata">IT-Регата</li>
+								<li class="SKillbox">Skillbox</li>
+								<li class="IT-People">IT-People</li>
+								<li class="Tinkoff">Тинькофф</li>
+								<li class="Skolkovo">Сколково</li>
+								<li class="DOubletapp">Doubletapp</li>
+								<li class="Softmedialab">SoftMediaLab</li>
+							</ul>
+						</button>
+						<button data-sort="Тема" class="theme-button">Тема
+							<ul class="theme">
+								<li class="Kotlin">Kotlin</li>
+								<li class="design">Дизайн в IT</li>
+								<li class="women">Женщины в IT</li>
+								<li class="start">Начало пути в IT</li>
+								<li class="growth">Карьерный рост в IT</li>
+								<li class="work-it">Работа в крупной IT компании</li>
+								<li class="own-business">Создание своего бизнеса IT</li>
+							</ul>
+						</button>
+						<button data-sort="Отрасль" class="industry-button">Отрасль
+							<ul class="industry">
+								<li class="outsource">Аутсорс</li>
+								<li class="hire">Найм в IT</li>
+								<li class="sales">Продажи</li>
+								<li class="outstaff">Аутстафф</li>
+								<li class="marketing">Маркетинг</li>
+								<li class="conferences">Конференции</li>
+								<li class="courses">Обучающие курсы IT</li>
+								<li class="rent">Аренда автомобилей</li>
+								<li class="AI">Искуственный интеллект</li>
+							</ul>
+						</button>
+						<button data-sort="Страна" class="market-button">Страна
+							<ul class="market">
+								<li class="SNG">СНГ рынок</li>
+								<li class="Foreign">Зарубежный рынок</li>
+							</ul>
+						</button>
 					</div>
 					<!-- <div class="sort-position">
 						<div class="Growth-IT">
@@ -213,7 +259,7 @@
 								data-industry="Обучающие курсы IT"
 								data-company="Skillbox"
 								data-theme="Создание своего бизнеса IT"
-								data-theme="Конференции"
+								data-industry="Конференции"
 								data-market="СНГ рынок"
 								data-date="13.05.24">
 								<div class="video-inner">
@@ -512,7 +558,7 @@
 										data-theme="Начало пути в IT"
 										data-industry="Конференции"
 										data-theme="Карьерный рост в IT"
-										data-theme="Найм в IT"
+										data-industry="Найм в IT"
 										data-company="IT-People"
 										data-date="10.03.23">
 								<div class="video-inner">

@@ -381,6 +381,24 @@ p {
 	color: #e31e32;
 }
 
+.date {
+	display: none;
+	position: absolute;
+	left: 10%;
+	width: 18rem;
+	height: 4.1rem;
+	background-color: #fff;
+	border: 3px solid #e31e32;
+	box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25);
+	border-radius: 20px;
+	list-style-type: none;
+	z-index: 1000;
+}
+
+.date-button:hover .date {
+	display: block;
+}
+
 .position2 {
 	display: none;
 	position: absolute;
@@ -397,7 +415,78 @@ p {
 
 .position-button:hover .position2 {
 	display: block;
-	transition: 0.3s linear;
+}
+
+.company {
+	display: none;
+	position: absolute;
+	left: 40%;
+	width: 18rem;
+	height: 20.1rem;
+	background-color: #fff;
+	border: 3px solid #e31e32;
+	box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25);
+	border-radius: 20px;
+	list-style-type: none;
+	z-index: 1000;
+}
+
+.company-button:hover .company {
+	display: block;
+}
+
+.theme {
+	display: none;
+	position: absolute;
+	right: 28%;
+	width: 18rem;
+	height: 15.8rem;
+	background-color: #fff;
+	border: 3px solid #e31e32;
+	box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25);
+	border-radius: 20px;
+	list-style-type: none;
+	z-index: 1000;
+}
+
+.theme-button:hover .theme {
+	display: block;
+}
+
+.industry {
+	display: none;
+	position: absolute;
+	right: 18%;
+	width: 18rem;
+	height: 17.9rem;
+	background-color: #fff;
+	border: 3px solid #e31e32;
+	box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25);
+	border-radius: 20px;
+	list-style-type: none;
+	z-index: 1000;
+}
+
+.industry-button:hover .industry {
+	display: block;
+}
+
+.market {
+	display: none;
+	position: absolute;
+	right: 7%;
+	width: 18rem;
+	height: 4.2rem;
+	background-color: #fff;
+	border: 3px solid #e31e32;
+	box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25);
+	border-radius: 20px;
+	list-style-type: none;
+	z-index: 1000;
+}
+
+.market-button:hover .market {
+	display: block;
 }
 
 li {
@@ -417,7 +506,6 @@ li:last-child {
 
 li:hover {
 	color: #e31e32;
-	transition: 0.3s linear;
 }
 
 .video-item {
