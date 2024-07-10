@@ -82,23 +82,48 @@ document.addEventListener('DOMContentLoaded', function () {
 // 	})
 
 document.addEventListener('DOMContentLoaded', function () {
+	// Находим все элементы <li> внутри .position-button .position2
 	var managerItem = document.querySelector('.position-button .manager')
+	var headOfITItem = document.querySelector('.position-button .headofit')
+	var businessItem = document.querySelector('.position-button .business')
 
+	// Функция для обработки кликов по элементам <li>
+	function handleItemClick(event, position) {
+		// Останавливаем всплытие события, чтобы клик не применялся к button
+		event.stopPropagation()
+
+		// Находим все элементы с классом .video-item
+		var videoItems = document.querySelectorAll('.video-item')
+
+		// Скрываем все .video-item
+		videoItems.forEach(function (item) {
+			item.style.display = 'none'
+		})
+
+		// Показываем только те .video-item, у которых data-position совпадает с переданным значением
+		videoItems.forEach(function (item) {
+			if (item.getAttribute('data-position') === position) {
+				item.style.display = 'block'
+			}
+		})
+	}
+
+	// Назначаем обработчики событий для каждого <li>
 	if (managerItem) {
 		managerItem.addEventListener('click', function (event) {
-			event.stopPropagation()
+			handleItemClick(event, 'Топ-менеджер')
+		})
+	}
 
-			var videoItems = document.querySelectorAll('.video-item')
+	if (headOfITItem) {
+		headOfITItem.addEventListener('click', function (event) {
+			handleItemClick(event, 'Руководитель в IT')
+		})
+	}
 
-			videoItems.forEach(function (item) {
-				item.style.display = 'none'
-			})
-
-			videoItems.forEach(function (item) {
-				if (item.getAttribute('data-position') === 'Топ-менеджер') {
-					item.style.display = 'block'
-				}
-			})
+	if (businessItem) {
+		businessItem.addEventListener('click', function (event) {
+			handleItemClick(event, 'Свой бизнес в IT')
 		})
 	}
 })

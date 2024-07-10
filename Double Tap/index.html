@@ -4,15 +4,14 @@
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<link rel="stylesheet" href="../Double Tap/assets/style.css" />
+		<link rel="stylesheet" type="text/css" href="../normalize.css">
 		<link rel="stylesheet" href="../Double Tap/assets/fonts/DT.HEADER.otf" />
 		<link rel="stylesheet" href="../Double Tap/assets/fonts/Montserrat-Bold.otf" />
 		<link rel="stylesheet" href="../Double Tap/assets/fonts/Montserrat.otf" />
-		<script src="https://kit.fontawesome.com/deb1052b8b.js" crossorigin="anonymous"></script>
 		<title>Double Tap</title>
 	</head>
 	<body class="overflow">
 		<header>
-		 <main>	
 				<menu class="menu visible">
 				<div class="menu-content">
 					<div class="logo">
@@ -44,42 +43,55 @@
 						</div>
 					</div>
 					<nav class="links">
-						<a href="#">Блог</a>
-						<a href="#">Проекты</a>
+						<a href="https://doubletapp.ai/blog">Блог</a>
+						<a href="https://doubletapp.ai/projects">Проекты</a>
 						<a href="#">Поиск</a>
 						<a href="https://doubletapp.ai/services">Услуги</a>
-						<a href="#">Вакансии</a>
-						<a href="#">Контакты</a>
+						<a href="https://doubletapp.ai/vacancies">Вакансии</a>
+						<a href="https://doubletapp.ai/contacts">Контакты</a>
 					</nav>
 				</div>
 				<div class="social-links">
-					<div class="socials">
+					<div class="social-links_content">
 						<div class="icons">
-									<img src="../Double Tap/assets/telegram.svg" alt="Telegram">
+							<a href="https://t.me/doubletapp">
+								<img src="../Double Tap/assets/telegram.svg" alt="Telegram">
+							</a>
+							<a href="https://www.youtube.com/@doubletapp.studio">
 								<img src="../Double Tap/assets/youtube.svg" alt="Youtube">
+							</a>
+							<a href="https://instagram.com/doubletapp.ai?igshid=YmMyMTA2M2Y=">
 								<img src="../Double Tap/assets/hashtag-solid.svg" alt="Instagram">
+							</a>
+							<a href="https://vk.com/doubletapp">
 								<img src="../Double Tap/assets/vk.svg" alt="Vk">
+							</a>
+							<a href="http://www.facebook.com/doubletappai/">
 								<img src="../Double Tap/assets/facebook-messenger.svg" alt="facebook-messenger">
-								</div>
+							</a>
+						</div>
 					</div>
-							</div>
+				</div>
 			</menu>
 		</header>
-			<section class="first-screen">
+			 <main>
+				<section class="first-screen">
 				<div class="name">
 					<h1>ЧТНП</h1>
 				</div>
 				<div class="screen-content">
-					<div class="text-img">
-						<div class="img2">
+					<div class="screen-content_subtitle">
+						<div class="screen-content_img">
 							<img src="../Double Tap/assets/DT sphere.png" alt="" />
 						</div>
-						<h2>
-							Что-то на программистском. Гости подкаста – спикеры из разных
-							областей IT. brОни будут делиться с тобой своим уникальным опытом,
+						<div class="screen-content_h2">
+							<h2>
+							Что-то на программистском. <br> Гости подкаста – спикеры из разных
+							областей IT.<br>Они будут делиться с тобой своим уникальным опытом,
 							давать советы начинающим и честно отвечать даже на самые каверзные
 							вопросы.
-						</h2>
+							</h2>
+						</div>
 					</div>
 					<div class="button">
 						<a href="#">
@@ -98,64 +110,82 @@
 						<p>Сортировка</p>
 					</div>
 					<div class="sort">
-						<button data-sort="Дата добавления" class="date-button">Дата добавления
-							<ul class="date">
-								<li class="date-new">Сначала новые</li>
-								<li class="date-old">Сначала старые</li>
-							</ul>
-						</button>
-						<button class="position-button" data-sort="Должность">Должность
-							<ul class="position2">
-								<li class="manager">топ-менеджер</li>
-								<li class="headofit">Руководитель в IT</li>
-								<li class="business">свой бизнес в it</li>
-							</ul>
-						</button>
-						<button data-sort="Компания" class="company-button">Компания
-							<ul class="company">
-								<li class="EPAM">EPAM</li>
-								<li class="METRO">МЕТРО</li>
-								<li class="Kontur">Контур</li>
-								<li class="Yandex">Яндекс</li>
-								<li class="IT-regata">IT-Регата</li>
-								<li class="SKillbox">Skillbox</li>
-								<li class="IT-People">IT-People</li>
-								<li class="Tinkoff">Тинькофф</li>
-								<li class="Skolkovo">Сколково</li>
-								<li class="DOubletapp">Doubletapp</li>
-								<li class="Softmedialab">SoftMediaLab</li>
-							</ul>
-						</button>
-						<button data-sort="Тема" class="theme-button">Тема
-							<ul class="theme">
-								<li class="Kotlin">Kotlin</li>
-								<li class="design">Дизайн в IT</li>
-								<li class="women">Женщины в IT</li>
-								<li class="start">Начало пути в IT</li>
-								<li class="growth">Карьерный рост в IT</li>
-								<li class="work-it">Работа в крупной IT компании</li>
-								<li class="own-business">Создание своего бизнеса IT</li>
-							</ul>
-						</button>
-						<button data-sort="Отрасль" class="industry-button">Отрасль
-							<ul class="industry">
-								<li class="outsource">Аутсорс</li>
-								<li class="hire">Найм в IT</li>
-								<li class="sales">Продажи</li>
-								<li class="outstaff">Аутстафф</li>
-								<li class="marketing">Маркетинг</li>
-								<li class="conferences">Конференции</li>
-								<li class="courses">Обучающие курсы IT</li>
-								<li class="rent">Аренда автомобилей</li>
-								<li class="AI">Искуственный интеллект</li>
-							</ul>
-						</button>
-						<button data-sort="Страна" class="market-button">Страна
-							<ul class="market">
-								<li class="SNG">СНГ рынок</li>
-								<li class="Foreign">Зарубежный рынок</li>
-							</ul>
-						</button>
+						<div class="dropdown">
+							<button data-sort="Дата добавления" class="date-button">Дата добавления</button>
+							<div class="dropdown-content dropdown-date">
+								<div class="dropdown-content_filters">
+									<a href="#" data-filter="Сначала новые">Сначала новые</a>
+								<a href="#" data-filter="Сначала старые">Сначала старые</a>
+								</div>
+							</div>
+						</div>
+						<div class="dropdown">
+							<button data-sort="Должность" class="position-button">Должность</button>
+							<div class="dropdown-content dropdown-position">
+								<div class="dropdown-content_filters">
+									<a href="#" data-filter="Топ-менеджер">Топ-менеджер</a>
+									<a href="#" data-filter="Руководитель в IT">Руководитель в IT</a>
+									<a href="#" data-filter="Свой бизнес в IT">Свой бизнес в IT</a>
+								</div>
+							</div>
+						</div>
+						<div class="dropdown">
+							<button data-sort="Компания" class="company-button">Компания</button>
+							<div class="dropdown-content dropdown-company">
+								<div class="dropdown-content_filters">
+									<a href="#" data-filter="EPAM">EPAM</a>
+									<a href="#" data-filter="METRO">Mетро</a>
+									<a href="#" data-filter="Kontur">Контур</a>
+									<a href="#" data-filter="Yandex">Яндекс</a>
+									<a href="#" data-filter="IT-regata">IT-Регата</a>
+									<a href="#" data-filter="Skillbox">Skillbox</a>
+									<a href="#" data-filter="IT-People">IT-People</a>
+									<a href="#" data-filter="Tinkoff">Тинькофф</a>
+									<a href="#" data-filter="Skolkovo">Сколково</a>
+									<a href="#" data-filter="Doubletapp">Doubletapp</a>
+									<a href="#" data-filter="Softmedialab">SoftMediaLab</a>
+								</div>
+							</div>
+						</div>
+						<div class="dropdown">
+							<button data-sort="Тема" class="theme-button">Тема</button>
+							<div class="dropdown-content dropdown-theme">
+								<div class="dropdown-content_filters">
+									<a href="#" data-filter="Kotlin">Kotlin</a>
+									<a href="#" data-filter="design">Дизайн в IT</a>
+									<a href="#" data-filter="women">Женщины в IT</a>
+									<a href="#" data-filter="start">Начало пути в IT</a>
+									<a href="#" data-filter="growth">Карьерный рост в IT</a>
+									<a href="#" data-filter="work-it">Работа в крупной компании</a>
+									<a href="#" data-filter="own-business">Создание своего бизнеса IT</a>
+								</div>
+							</div>
+						</div>
+						<div class="dropdown">
+							<button data-sort="Отрасль" class="industry-button">Отрасль</button>
+							<div class="dropdown-content dropdown-industry">
+								<div class="dropdown-content_filters">
+									<a href="#" data-filter="oursource">Аутсорс</a>
+									<a href="#" data-filter="hire">Найм в IT</a>
+									<a href="#" data-filter="sales">Продажи</a>
+									<a href="#" data-filter="outstaff">Аутстафф</a>
+									<a href="#" data-filter="marketing">Маркетинг</a>
+									<a href="#" data-filter="conferences">Конференции</a>
+									<a href="#" data-filter="courses">Обучающие курсы IT</a>
+									<a href="#" data-filter="rent">Аренда автомобилей</a>
+									<a href="#" data-filter="AI">Искусственный интеллект</a>
+								</div>
+							</div>
+						</div>
+						<div class="dropdown">
+							<button data-sort="Страна" class="market-button">Страна</button>
+							<div class="dropdown-content dropdown-market">
+								<div class="dropdown-content_filters">
+									<a href="#" data-filter="SNG">СНГ рынок</a>
+									<a href="#" data-filter="Foreign">зарубежный рынок</a>
+								</div>
+							</div>
+						</div>
 					</div>
 					<!-- <div class="sort-position">
 						<div class="Growth-IT">
@@ -201,7 +231,7 @@
 								data-theme="Создание своего бизнеса IT"
 								data-market="Зарубежный рынок"
 								data-industry="Аренда автомобилей"
-								data-positon="Руководитель в IT"
+								data-position="Руководитель в IT"
 								data-date="5.06.24">
 								<div class="video-inner">
 									<div class="video-img">
@@ -252,6 +282,7 @@
 								</div>
 							</div>
 							<div class="video-item"
+								data-position="Свой бизнес в IT"
 								data-market="СНГ рынок"
 								data-industry="Найм в IT"
 								data-theme="Работа в крупной IT компании"
@@ -281,7 +312,8 @@
 									>
 								</div>
 							</div>
-							<div class="video-item" 
+							<div class="video-item"
+								data-position="Руководитель в IT" 
 								data-market="СНГ рынок"
 								data-company="Яндекс"
 								data-theme="Работа в крупной IT компании"
@@ -360,6 +392,7 @@
 								</div>
 							</div>
 							<div class="video-item"
+								data-position="Руководитель в IT"
 								data-market="СНГ рынок"
 								data-theme="Начало пути в IT"
 								data-theme="Карьерный рост в IT"
@@ -496,6 +529,7 @@
 								</div>
 							</div>
 							<div class="video-item"
+							data-position="Руководитель в IT"
 										data-market="СНГ рынок"
 										data-theme="Карьерный рост в IT"
 										data-theme="Работа в крупной IT компании"
@@ -553,6 +587,7 @@
 								</div>
 							</div>
 							<div class="video-item"
+										data-position="Свой бизнес в IT"
 							      data-theme="Женщины в IT"
 										data-market="СНГ рынок"
 										data-theme="Начало пути в IT"
@@ -648,6 +683,7 @@
 					</h3>
 					<a href="mailto:,podcast@doubletapp.io">podcast@doubletapp.io</a>
 				</section>
+			</main>
 				<footer>
 					<div class="footer-content">
 						<div class="first-content">
@@ -659,11 +695,21 @@
 							</div>
 							<div class="social-links">
 								<div class="social-icons">
-									<img src="../Double Tap/assets/telegram.svg" alt="Telegram">
-								<img src="../Double Tap/assets/youtube.svg" alt="Youtube">
-								<img src="../Double Tap/assets/hashtag-solid.svg" alt="Instagram">
-								<img src="../Double Tap/assets/vk.svg" alt="Vk">
-								<img src="../Double Tap/assets/facebook-messenger.svg" alt="facebook-messenger">
+										<a href="https://t.me/doubletapp">
+										<img src="../Double Tap/assets/telegram.svg" alt="Telegram">
+										</a>
+										<a href="https://www.youtube.com/@doubletapp.studio">
+										<img src="../Double Tap/assets/youtube.svg" alt="Youtube">
+										</a>
+										<a href="https://instagram.com/doubletapp.ai?igshid=YmMyMTA2M2Y=">
+										<img src="../Double Tap/assets/hashtag-solid.svg" alt="Instagram">
+										</a>
+										<a href="https://vk.com/doubletapp">
+										<img src="../Double Tap/assets/vk.svg" alt="Vk">
+										</a>
+										<a href="http://www.facebook.com/doubletappai/">
+										<img src="../Double Tap/assets/facebook-messenger.svg" alt="facebook-messenger">
+										</a>
 								</div>
 							</div>
 						</div>
@@ -710,7 +756,7 @@
 					</div>
 				</footer>
 			</div>
-		</main>
+		
 		<script src="../Double Tap/main.js"></script>
 	</body>
 </html>

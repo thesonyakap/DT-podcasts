@@ -31,6 +31,7 @@
 
 html,
 body {
+	overflow-x: hidden;
 	font-family: 'DT.HEADER';
 	second-family: 'Montserrat', sans-serif;
 }
@@ -67,7 +68,7 @@ main {
 .menu {
 	position: fixed;
 	background: #fff;
-	width: 1216px;
+	/* width: 1216px; */
 	height: 186px;
 	border-radius: 112px;
 	/* background: #d9d9d9; */
@@ -209,7 +210,7 @@ span:after {
 	filter: sepia(1) hue-rotate(310deg) saturate(10);
 }
 
-.socials {
+.social-links_content {
 	display: block;
 	width: 100%;
 	position: absolute;
@@ -226,12 +227,11 @@ span:after {
 	width: 1183px;
 	margin: 90px 112px 118px 60px;
 }
-.text-img {
+.screen-content_subtitle {
 	display: flex;
 }
 
-.img2 {
-	/* width: 474%; */
+.screen-content_img {
 	width: 314px;
 	height: 305px;
 }
@@ -241,12 +241,9 @@ h1 {
 	color: #e31e32;
 }
 
-h2 {
-	font-size: 36px;
-}
-
-.text-img h2 {
+.screen-content_subtitle h2 {
 	margin-left: 111px;
+	font-size: 36px;
 }
 
 .button {
@@ -283,12 +280,9 @@ a {
 	text-decoration: none;
 }
 
-p {
-	font-size: 20px;
-}
-
 .button p {
 	font-family: 'Montserrat-Bold', sans-serif;
+	font-size: 20px;
 	font-weight: 700;
 	text-transform: uppercase;
 	color: #fff;
@@ -301,9 +295,13 @@ p {
 	padding: 80px 74px;
 }
 
+.title p {
+	font-size: 20px;
+}
+
 .sort {
 	display: flex;
-	justify-content: space-evenly;
+	/* justify-content: space-evenly; */
 }
 
 .sort button {
@@ -318,11 +316,11 @@ p {
 }
 
 .sort button:first-child {
-	margin-left: 90px;
+	margin-left: 85px;
 }
 
 .sort button:last-child {
-	margin-right: 90px;
+	margin-right: 85px;
 }
 
 .sort button:hover {
@@ -335,11 +333,71 @@ p {
 }
 
 .sort-positon p {
+	font-size: 20px;
 	margin: 85px auto 60px;
 }
 
-.Growth-IT p {
-	margin: 85px auto 60px;
+.dropdown-content {
+	display: none;
+	position: absolute;
+	z-index: 1000;
+}
+
+.dropdown-date {
+	left: 12%;
+}
+
+.dropdown-position {
+	left: 28%;
+}
+
+.dropdown-company {
+	left: 43%;
+}
+
+.dropdown-theme {
+	right: 25%;
+}
+
+.dropdown-industry {
+	right: 16%;
+}
+
+.dropdown-market {
+	right: 7%;
+}
+
+.dropdown-content a {
+	margin: 2px 20px;
+	text-align: center;
+	font-family: 'Montserrat';
+	text-transform: uppercase;
+	font-size: 20px;
+	align-self: normal;
+	border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+	color: #000;
+}
+
+.dropdown-content a:hover {
+	color: #e31e32;
+}
+
+.dropdown-content_filters {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	border: 3px solid #e31e32;
+	border-radius: 30px;
+	background-color: #fff;
+	box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25);
+}
+
+.dropdown-content a:last-child {
+	border: none;
+}
+
+.dropdown:hover .dropdown-content {
+	display: block;
 }
 
 .video-item.hidden {
@@ -381,131 +439,8 @@ p {
 	color: #e31e32;
 }
 
-.date {
-	display: none;
-	position: absolute;
-	left: 10%;
-	width: 18rem;
-	height: 4.1rem;
-	background-color: #fff;
-	border: 3px solid #e31e32;
-	box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25);
-	border-radius: 20px;
-	list-style-type: none;
-	z-index: 1000;
-}
-
-.date-button:hover .date {
-	display: block;
-}
-
-.position2 {
-	display: none;
-	position: absolute;
-	left: 27%;
-	width: 18rem;
-	height: 5.7rem;
-	background-color: #fff;
-	border: 3px solid #e31e32;
-	box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25);
-	border-radius: 20px;
-	list-style-type: none;
-	z-index: 1000;
-}
-
-.position-button:hover .position2 {
-	display: block;
-}
-
-.company {
-	display: none;
-	position: absolute;
-	left: 40%;
-	width: 18rem;
-	height: 20.1rem;
-	background-color: #fff;
-	border: 3px solid #e31e32;
-	box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25);
-	border-radius: 20px;
-	list-style-type: none;
-	z-index: 1000;
-}
-
-.company-button:hover .company {
-	display: block;
-}
-
-.theme {
-	display: none;
-	position: absolute;
-	right: 28%;
-	width: 18rem;
-	height: 15.8rem;
-	background-color: #fff;
-	border: 3px solid #e31e32;
-	box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25);
-	border-radius: 20px;
-	list-style-type: none;
-	z-index: 1000;
-}
-
-.theme-button:hover .theme {
-	display: block;
-}
-
-.industry {
-	display: none;
-	position: absolute;
-	right: 18%;
-	width: 18rem;
-	height: 17.9rem;
-	background-color: #fff;
-	border: 3px solid #e31e32;
-	box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25);
-	border-radius: 20px;
-	list-style-type: none;
-	z-index: 1000;
-}
-
-.industry-button:hover .industry {
-	display: block;
-}
-
-.market {
-	display: none;
-	position: absolute;
-	right: 7%;
-	width: 18rem;
-	height: 4.2rem;
-	background-color: #fff;
-	border: 3px solid #e31e32;
-	box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25);
-	border-radius: 20px;
-	list-style-type: none;
-	z-index: 1000;
-}
-
-.market-button:hover .market {
-	display: block;
-}
-
-li {
-	font-family: 'Montserrat';
-	font-size: 18px;
-	margin: 5px 0px;
-	text-transform: uppercase;
-	color: #000;
-	flex-direction: column;
-	width: 100%;
-	border-bottom: 1px solid rgba(0, 0, 0, 0.1);
-}
-
-li:last-child {
-	border: none;
-}
-
-li:hover {
-	color: #e31e32;
+.title h2 {
+	font-size: 36px;
 }
 
 .video-item {
@@ -557,6 +492,7 @@ iframe {
 
 .video-p p {
 	margin-top: 20px;
+	font-size: 20px;
 }
 
 .video-p {
@@ -702,4 +638,121 @@ iframe {
 	justify-content: center;
 	font-family: 'Montserrat';
 	margin: 0px auto 20px;
+}
+
+@media (max-width: 1300px) {
+	.first-screen {
+		margin: 400px 50px 0px;
+	}
+
+	.screen-content_subtitle {
+		align-items: center;
+	}
+
+	.name h1 {
+		font-size: 100px;
+	}
+
+	.screen-content_h2 {
+		width: 729px;
+	}
+
+	.screen-content_subtitle h2 {
+		font-size: 27px;
+		margin-left: 70px;
+	}
+
+	.button {
+		margin: 0px 337px 118px 379px;
+	}
+}
+
+@media (max-width: 1156px) {
+	.menu {
+		height: 150px;
+	}
+
+	.logo {
+		margin: 60px 61px;
+	}
+
+	.links {
+		width: 1000px;
+	}
+	.first-screen {
+		margin: 300px 50px 0px;
+	}
+
+	.container {
+		width: 990px;
+	}
+
+	.title {
+		padding: 80px 90px;
+	}
+
+	.sort {
+		justify-content: center;
+		align-items: center;
+	}
+
+	.sort button:first-child {
+		margin-left: 50px;
+	}
+
+	.video-holder {
+		width: 965px;
+	}
+
+	.video-item {
+		width: 417px;
+		height: 236px;
+	}
+
+	.screen-content_img {
+		width: auto;
+		height: auto;
+	}
+
+	.screen-content_img img {
+		width: 250px;
+		height: 250px;
+	}
+	.name h1 {
+		font-size: 80px;
+	}
+
+	.screen-content_subtitle h2 {
+		font-size: 24px;
+		margin-left: 70px;
+	}
+
+	.screen-content_h2 {
+		width: 575px;
+	}
+
+	.button {
+		margin: 0px 337px 118px 314px;
+	}
+
+	.ideas h3 {
+		font-size: 22px;
+	}
+
+	.logo-footer {
+		margin: 0px 40px;
+	}
+
+	.footer-content {
+		align-items: flex-start;
+		width: 990px;
+	}
+
+	.social-icons {
+		justify-content: space-evenly;
+	}
+
+	.footer-menu {
+		width: 945px;
+	}
 }
