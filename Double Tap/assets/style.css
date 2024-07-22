@@ -151,6 +151,7 @@ span {
 	width: 77px;
 	position: absolute;
 	top: 40%;
+	left: 42%;
 }
 
 .span-open::after {
@@ -641,6 +642,17 @@ iframe {
 }
 
 @media (max-width: 1300px) {
+	.menu-links {
+		width: auto;
+	}
+
+	.span-open::before {
+		left: 0;
+	}
+
+	.span-open::after {
+		left: -18%;
+	}
 	.first-screen {
 		margin: 400px 50px 0px;
 	}
@@ -677,7 +689,7 @@ iframe {
 	}
 
 	.links {
-		width: 1000px;
+		width: auto;
 	}
 	.first-screen {
 		margin: 300px 50px 0px;
@@ -758,11 +770,19 @@ iframe {
 }
 
 @media (max-width: 990px) {
+	.menu {
+		height: 115px;
+	}
+
+	.logo {
+		margin: 43px 61px;
+	}
+
 	.first-screen {
 		margin: 250px 50px 0px;
 	}
 	.screen-content {
-		width: 700px;
+		width: auto;
 		margin: 90px auto 118px;
 	}
 
@@ -777,19 +797,34 @@ iframe {
 
 	.button {
 		width: 391px;
-		margin: 0px 337px 118px 260px;
+		margin: 20px 337px 118px 260px;
 	}
 
 	.button p {
 		font-size: 18px;
 	}
 
-	.video-holder {
+	.container {
 		width: 700px;
 	}
 
 	.title {
-		padding: 80px 165px;
+		padding: 20px 10px 70px;
+	}
+
+	.sort {
+		display: grid;
+		gap: 10px 0px;
+		grid-template-columns: auto auto auto;
+		justify-items: center;
+	}
+
+	.sort button:first-child {
+		margin: 0px 20px;
+	}
+
+	.video-holder {
+		width: 700px;
 	}
 
 	.video-item {
@@ -797,6 +832,105 @@ iframe {
 		height: 300px;
 	}
 
-	.video-container {
+	.footer-content {
+		width: 700px;
+		justify-content: center;
+		align-items: baseline;
+	}
+
+	.first-content {
+		margin-bottom: 60px;
+	}
+
+	.logo img {
+		width: 270px;
+		height: 23px;
+	}
+
+	.position1 p {
+		font-size: 17px;
+	}
+
+	.policy a {
+		font-size: 17px;
+	}
+
+	.policy {
+		margin-top: 95px;
+	}
+
+	.footer-menu {
+		display: flex;
+		justify-content: center;
+		width: auto;
+		margin: auto auto 40px;
+	}
+
+	.services {
+		margin-top: 0px;
+	}
+}
+
+@media (max-width: 720px) {
+	span::after,
+	span::before,
+	.span-open::after,
+	.span-open::before {
+		border: 6px solid #e31e32;
+	}
+
+	.links a {
+		font-size: 25px;
+	}
+
+	.social-links_content {
+		left: 28%;
+		bottom: 61%;
+	}
+	.name h1 {
+		font-size: 75px;
+	}
+
+	.screen-content {
+		margin: 60px auto 118px;
+	}
+	.screen-content_subtitle h2 {
+		font-size: 17px;
+	}
+
+	.button {
+		margin: 10px 337px 118px 225px;
+		width: 300px;
+	}
+
+	.screen-content_img img {
+		width: 160px;
+		height: 160px;
+	}
+
+	.button p {
+		font-size: 16px;
+	}
+
+	.position1 p {
+		font-size: 13px;
+	}
+
+	.policy {
+		margin-top: 108px;
+	}
+
+	.policy a {
+		font-size: 14px;
+	}
+
+	.services a {
+		font-size: 15px;
+	}
+}
+
+@media (max-width: 600px) {
+	.social-links_content {
+		left: 23%;
 	}
 }
