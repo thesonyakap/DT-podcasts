@@ -65,69 +65,6 @@ document.addEventListener('DOMContentLoaded', function () {
 		menu.classList.add('visible')
 	}
 })
-
-/* сортировка */
-// document
-// 	.querySelector('.position-button')
-// 	.addEventListener('click', function () {
-// 		const mng = document.querySelector('.manager')
-// 		const videos = document.querySelectorAll('.video-item')
-// 		let videoHolder = document.querySelector('.video-holder')
-// 		if (videos == 'data-positon="Топ-менеджер"') {
-// 			videos.classList.add('visible')
-// 		} else {
-// 			videos.classList.add('.hidden')
-// 		}
-// 		console.log('videos')
-// 	})
-
-document.addEventListener('DOMContentLoaded', function () {
-	// Находим все элементы <li> внутри .position-button .position2
-	var managerItem = document.querySelector('.position-button .manager')
-	var headOfITItem = document.querySelector('.position-button .headofit')
-	var businessItem = document.querySelector('.position-button .business')
-
-	// Функция для обработки кликов по элементам <li>
-	function handleItemClick(event, position) {
-		// Останавливаем всплытие события, чтобы клик не применялся к button
-		event.stopPropagation()
-
-		// Находим все элементы с классом .video-item
-		var videoItems = document.querySelectorAll('.video-item')
-
-		// Скрываем все .video-item
-		videoItems.forEach(function (item) {
-			item.style.display = 'none'
-		})
-
-		// Показываем только те .video-item, у которых data-position совпадает с переданным значением
-		videoItems.forEach(function (item) {
-			if (item.getAttribute('data-position') === position) {
-				item.style.display = 'block'
-			}
-		})
-	}
-
-	// Назначаем обработчики событий для каждого <li>
-	if (managerItem) {
-		managerItem.addEventListener('click', function (event) {
-			handleItemClick(event, 'Топ-менеджер')
-		})
-	}
-
-	if (headOfITItem) {
-		headOfITItem.addEventListener('click', function (event) {
-			handleItemClick(event, 'Руководитель в IT')
-		})
-	}
-
-	if (businessItem) {
-		businessItem.addEventListener('click', function (event) {
-			handleItemClick(event, 'Свой бизнес в IT')
-		})
-	}
-})
-
 // script.js
 document.addEventListener('DOMContentLoaded', function () {
 	var dropdownLinks = document.querySelectorAll('.dropdown-content a')
@@ -183,12 +120,9 @@ document.addEventListener('DOMContentLoaded', function () {
 		var parts = dateString.split('.')
 		return new Date(parts[2], parts[1] - 1, parts[0]) // Год, месяц (0-11), день
 	}
-})
-
-document.addEventListener('DOMContentLoaded', function () {
-	var dropdownLinks = document.querySelectorAll('.dropdown-content a')
 
 	dropdownLinks.forEach(function (link) {
+		var dropdownLinks = document.querySelectorAll('.dropdown-content a')
 		link.addEventListener('click', function (event) {
 			event.preventDefault()
 			var filter = event.target.getAttribute('data-filter')
@@ -211,41 +145,41 @@ document.addEventListener('DOMContentLoaded', function () {
 
 // script.js
 document.addEventListener('DOMContentLoaded', function () {
-	var dropdownLinks = document.querySelectorAll('.dropdown-content a')
+	const videoItems = document.querySelectorAll('.video-item')
+	const dropdownLinks = document.querySelectorAll('.dropdown-content a')
 
-	dropdownLinks.forEach(function (link) {
+	dropdownLinks.forEach(link => {
 		link.addEventListener('click', function (event) {
 			event.preventDefault()
-			var filter = event.target.getAttribute('data-filter')
-			filterContent(filter)
+			const filter = link.dataset.filter
+			const parentDropdown = link.closest('.dropdown')
+			const sortType = parentDropdown.querySelector('button').dataset.sort
+
+			filterVideos(sortType, filter)
 		})
 	})
 
-	function filterContent(filter) {
-		var videoItems = document.querySelectorAll('.video-item')
+	function filterVideos(sortType, filter) {
+		videoItems.forEach(item => {
+			item.style.display = 'none'
 
-		var filterMap = {
-			EPAM: 'EPAM',
-			METRO: 'МЕТРО',
-			Kontur: 'Контур',
-			Yandex: 'Яндекс',
-			'IT-regata': 'IT-regata',
-			Skillbox: 'Skillbox',
-			'IT-People': 'IT-People',
-			Tinkoff: 'Тинькофф',
-			Skolkovo: 'Сколково',
-			Doubletapp: 'Doubletapp',
-			Softmedialab: 'SoftMediaLab',
-		}
-
-		var company = filterMap[filter]
-
-		videoItems.forEach(function (item) {
-			if (item.getAttribute('data-company') === company) {
-				item.style.display = 'block'
+			if (sortType === 'Дата добавления') {
+				filterByDate(item, filter)
 			} else {
-				item.style.display = 'none'
+				filterByAttribute(item, `data-${sortType.toLowerCase()}`, filter)
 			}
 		})
 	}
-})
+
+	function filterByAttribute(item, attribute, value) {
+		const attrValues = item.getAttribute(attribute).split(',')
+		if (attrValues.includes(value)) {
+			item.style.display = 'block'
+		}
+	}
+
+	function filterByDate(item, filter) {
+		item.style.display = 'block'
+		// Implement sorting logic if needed
+	}
+})()
